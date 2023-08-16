@@ -72,6 +72,7 @@ def get_snowsql_config(
 
         config.read(config_file_path)
         session_config = config[connection_path]
+
         # Convert snowsql connection variable names to snowcli ones
         session_config_dict = {
             snowsql_to_snowpark_config_mapping[k]: v.strip('"')
